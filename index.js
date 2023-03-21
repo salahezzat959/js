@@ -6,7 +6,7 @@ console.log(prompt);
 var wel = "welcome " + " " + promp;
 document.write("<h1>", wel)
 
-//  task 2
+// //  task 2
 function temp(t) {
     t >= 30 ? console.log("Hot") : console.log("Cold")
     // if (t >= 30) {
@@ -21,30 +21,21 @@ function temp(t) {
 temp(40);
 
 //  task 3
-for (var i = 1; i !== 0; i++) {
-    var Nam = String(prompt("Please Enter your Name"));
-    if (Nam !== 'null') {
-        i = 0;
-    }
-    else {
-        i = 1;
-    }
-}
+var mm =/^[A-Za-z]+$/;
+do {
+    var Nam = prompt("Please Enter your Name")
 
-for (var x = 1; x !== 0; x++) {
+} while (! Nam.match(mm));
+
+
+var nn =/^[0-9]+$/
+do {
     var birth_year = prompt("Please Enter your brith year");
-    if (isNaN(birth_year) || birth_year > 2010) {
-        x = 1;
-    }
-    else {
-        x = 0;
-
-    }
-}
+} while (! birth_year.match(nn))
 var age = 2023 - birth_year;
-document.write("<h2>", "Name:", Nam)
-document.write("<br>", "<h2>", "Brith year:", birth_year)
-document.write("<br>", "<h2>", "Age:", age)
+document.write("<h2>","Name: ", Nam);
+document.write("<br>", "<h2>", "Brith year: ", birth_year);
+document.write("<br>", "<h2>", "Age: ", age);
 
 //  Task 4
 
